@@ -1,5 +1,6 @@
+const GIGASECOND = 10**12
+
 export const gigasecond = (initialDate) => {
-  const initialTime = new Date(initialDate.getTime())
-  initialTime.setUTCSeconds(initialTime.getSeconds() + 1000000000)
-  return initialTime
+  const initialTime = initialDate.getTime()
+  return new Date (initialTime + GIGASECOND)
 };
